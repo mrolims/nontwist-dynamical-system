@@ -8,8 +8,8 @@ Lower: I0 > 0
 
 Usage
 -----
-This script takes on three parameters
-        python rec_times.py eps I0 N
+This script takes on two parameters
+        python rec_times.py eps I0
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
@@ -28,7 +28,8 @@ eps = float(sys.argv[1]) # The perturbation
 I0 = float(sys.argv[2]) # The initial action.
 # If I0 > 0, the script calculates the recurrence times for the LOWER region.
 # If I0 < 0, the script calculates the recurrence times for the UPPER region.
-N = int(float(sys.argv[3])) # Maximum iteration time
+# --- Parameters of the simulation --- #
+N = int(1e9) # Maximum iteration time
 # Variables to format the datafile
 eN = int(np.log10(N))
 bN = int(N/10**eN)
