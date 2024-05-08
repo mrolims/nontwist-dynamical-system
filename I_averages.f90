@@ -18,31 +18,31 @@ program I_averages
     use functions
     implicit none
     ! --- Parameters --- !
-    integer, parameter :: n_ic = int(1e6)
     real(8), parameter :: pi = dacos(-1.0d0)
+    real(8), parameter :: I_ini = 1e-10
     ! --- Variables --- !
     integer :: j
     integer :: N
+    integer :: n_ic
     integer :: eN, bN, en_ic, bn_ic, eI_ini, bI_ini
     real(8) :: eps
     real(8), allocatable :: Imean(:), Irms(:)
-    real(8) :: I_ini
-    real(8) :: theta(n_ic), I(n_ic)
+    real(8), allocatable :: theta(:), I(:)
     real(8) :: params(15)
-    real(8) :: q_factor(n_ic), E_r(n_ic), v_parallel(n_ic)
-    real(8) :: S(n_ic)
+    real(8), allocatable :: q_factor(:), E_r(:), v_parallel(:)
+    real(8), allocatable :: S(:)
     character :: path*10, datafile*250, arg*15
 
-    path = "Data"
+    path = "Data/"
 
     call getarg(1, arg)
     read(arg, *)eps ! The perturbation
     call getarg(2, arg)
-    read(arg, *)I_ini ! The initial action
+    read(arg, *)n_ic ! The number of initial conditons
     call getarg(3, arg)
     read(arg, *)N ! The maximum number of iterations
     ! Allocate the arrays
-    allocate(Irms(1:N), Imean(1:N))
+    allocate(Irms(1:N), Imean(1:N), theta(1:n_ic), I(1:n_ic), q_factor(1:n_ic), E_r(1:n_ic), v_parallel(1:n_ic), S(1:n_ic))
     ! Variables to format the datafile
     call return_base_exp(bN, eN, dble(N))
     call return_base_exp(bn_ic, en_ic, dble(n_ic))
