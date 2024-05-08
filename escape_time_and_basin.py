@@ -6,9 +6,9 @@ Calculates the escape time and escape basin for a grid of initial conditions.
 
 Usage
 -----
-This script takes on two parameters.
+This script takes on one parameters.
 
-        python escape_time_and_basin.py I_esc grid
+        python escape_time_and_basin.py I_esc
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
@@ -27,9 +27,10 @@ if not os.path.isdir(path):
 
 # --- User input --- #
 I_esc = float(sys.argv[1]) # The limits of the survival region
-grid = int(sys.argv[2]) # The grid size
+# --- Parameters of the simulation --- #
 eps = 1e-3 # The perturbation
 Nmax = int(1e6) # The maximum iteration time
+grid = 1080 # The grid size
 # Lower and upper bound for theta
 theta_ini = 0
 theta_end = 1

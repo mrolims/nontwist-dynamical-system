@@ -7,9 +7,9 @@ Also calculates some statistical measures regarding the escape times.
 
 Usage
 -----
-This script takes on two parameters.
+This script takes on one parameters.
 
-        python escape_side_ratio_vs_Iesc.py eps n_ic
+        python escape_side_ratio_vs_Iesc.py eps
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
@@ -28,7 +28,6 @@ if not os.path.isdir(path):
     os.system("mkdir %s" % path)
 # --- User input --- #
 eps = float(sys.argv[1]) # The perturbation
-n_ic = int(float(sys.argv[2])) # The number of initial conditions
 #
 if eps == 1e-3:
     I_esc_end = 0.045
@@ -38,6 +37,7 @@ elif eps == 3e-3:
     I_esc_end = 0.074
 # --- Parameters of the simulation --- #
 Nmax = int(1e6) # Maximum iteration time
+n_ic = int(1e6) # The number of initial conditions
 I_esc_ini = 0.0001 # Lower bound for the I_esc
 n_I_esc = 100 # Sample size of I_esc
 I_esc = np.linspace(I_esc_ini, I_esc_end, n_I_esc) # Array with the values of I_esc uniformly distributed
