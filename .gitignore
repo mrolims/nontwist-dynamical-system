@@ -5,7 +5,6 @@ Data/
 Figures/
 
 *.nfs*
-*.txt
 *.dat
 *.out
 *.swp
