@@ -1,8 +1,11 @@
 """
 functions.py
-===========
+============
 
-This module provides various functions for analyzing a dynamical system using numerical methods.
+This module contains all the functions necessary to reproduce the results reported
+on the paper entitled "Ratchet current and scaling properties in a nontwist mapping",
+by Matheus Rolim Sales, Daniel Borin, Leonardo Costa de Souza, José Danilo Szezech Jr.,
+Ricardo Luiz Viana, Iberê Luiz Caldas, e Edson Denis Leonel.
 
 Functions
 ---------

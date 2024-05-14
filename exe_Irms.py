@@ -12,7 +12,7 @@ This scripts takes on two parameters
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
-Last updated: 08/05/2024
+Last updated: 2024-05-14
 """
 import os
 import sys

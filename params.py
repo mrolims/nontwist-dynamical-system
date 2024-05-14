@@ -6,7 +6,7 @@ The parameters used in the simulations
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
-Last updated: 08/05/2024
+Last updated: 2024-05-14
 """
 
 q1, q2, q3 = 5, -6.3, 6.3
