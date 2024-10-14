@@ -24,6 +24,8 @@ import sys
 fig = sys.argv[1]
 # Number of initial conditions
 n_ic = int(1e6)
+# Maximum number of iterations
+N = int(1e6)
 
 if fig == "a":
     I_escs = np.arange(0.01, 0.045, 0.005)
@@ -33,6 +35,6 @@ elif fig == "c":
     I_escs = np.arange(0.002, 0.011, 0.001)
 
 for Iesc in I_escs:
-    comm = "python survival_probability.py %.10f %i" % (Iesc, n_ic)
+    comm = "python survival_probability.py %.10f %i %i" % (Iesc, n_ic, N)
     print("$", comm)
     os.system(comm)

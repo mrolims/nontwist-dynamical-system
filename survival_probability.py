@@ -21,6 +21,7 @@ import os
 
 # The path variable defines the path to where the data will be stored.
 path = "Data"
+path = "/home/matheus/Pesquisa/DriftMap/Data"
 if not os.path.isdir(path):
     os.system("mkdir %s" % path)
 
