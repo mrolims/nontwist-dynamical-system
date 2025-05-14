@@ -1,6 +1,6 @@
 # nontwist-dynamical-system
 
-Code repository accompanying the publication entitled "Ratchet current and scaling invariance in a nontwist mapping".
+Code repository accompanying the publication entitled "[Ratchet current and scaling invariance in a nontwist mapping](https://doi.org/10.1016/j.chaos.2024.115614)".
 
 This project contains the code to generate and plot the data from all figures.
 
@@ -54,6 +54,12 @@ To generate the data of Figure 8, run the auxiliary script ``` exe_Irms.py 1e4 1
 ## Figure 9
 
 To generate the data of Figure 9, run the auxiliary script ``` exe_Irms.py 1e4 1e8 ```. It will compile the ``` I_averages.f90 ``` program with ``` ifx ``` and execute it for several values of ``` eps ```. To create the plot and calculate the critical exponents, run all cells within the heading named ``` Fig. 9 ``` in the ``` Plots.ipynb ``` Jupyter notebook.
+
+## Citation
+
+If you use this repository or parts of it in your work, please cite:
+
+M. Rolim Sales, D. Borin, L. C. de Souza, J. D. Szezech Jr., R. L. Viana, I. L. Caldas, and E. D. Leonel, **Ratchet current and scaling properties in a nontwist mapping**, [*Chaos, Solitons & Fractals 189, 115614 (2024)*](https://doi.org/10.1016/j.chaos.2024.115614).
 
 ## Contact
 
